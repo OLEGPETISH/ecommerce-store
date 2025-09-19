@@ -62,7 +62,7 @@ const onCheckout = async () => {
                 <Currency value={totalPrice} />
             </div>
         </div>
-        <Button onClick={onCheckout} className="w-full mt-6 bg-black text-white hover:bg-gray-900">
+        <Button disabled={items.length===0} onClick={onCheckout} className="w-full mt-6 bg-black text-white hover:bg-gray-900">
             Checkout
         </Button>
     </div>

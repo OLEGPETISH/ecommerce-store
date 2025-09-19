@@ -9,7 +9,17 @@ import Summary from "./components/summary";
 
 const CartPage = () => {
 
-    const cart = useCart();
+  const [isMounted, setIsMounted] = useState(false);
+  
+  const cart = useCart();
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
 
   return (
