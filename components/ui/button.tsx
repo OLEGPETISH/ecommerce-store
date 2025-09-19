@@ -2,7 +2,9 @@ import { cn } from "@/lib/utils";
 import  { forwardRef } from "react";
 
 export interface ButtonProps
-extends React.ButtonHTMLAttributes<HTMLButtonElement>{}
+extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+      variant?: "default" | "outline";
+}
 
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
@@ -14,6 +16,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 }, ref) => {
     return(
         <button
+        type={type}
         className={cn(
           `
            w-auto 
